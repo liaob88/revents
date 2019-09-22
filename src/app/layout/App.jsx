@@ -21,13 +21,13 @@ class App extends Component {
             <NavBar />
             <Container>
               <Switch key={this.props.location.key}>
-                <Route exact path='/' className='main' component={HomePage} />
-                <Route exact path='/events' className='main' component={EventDashboard} />
-                <Route path='/events/:id' className='main' component={EventDetailedPage} />
-                <Route path='/people' className='main' component={PeopleDashboard} />
-                <Route path='/profile/:id' className='main' component={UserDetailedPage} />
-                <Route path='/settings' className='main' component={SettingsDashboard} />
-                <Route path={['/createEvent', '/manage/:id']} className='main' component={EventForm} />
+                <Route exact path='/'  component={HomePage} />
+                <Route exact path='/events'  component={EventDashboard} />
+                <Route path='/events/:id'  component={EventDetailedPage} />
+                <Route path='/people'  component={PeopleDashboard} />
+                <Route path='/profile/:id'  component={UserDetailedPage} />
+                <Route path='/settings'  component={SettingsDashboard} />
+                <Route path={['/createEvent', '/manage/:id']}  component={EventForm} />
                 <Route path='/test' component={TestComponent} />
               </Switch>
               
