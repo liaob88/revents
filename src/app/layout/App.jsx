@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import EventDashboard from '../../features/event/EventDashboard/EventDashboard';
-import NavBar from '../../features/nav/NavBar/NavBar/NavBar';
+import NavBar from '../../features/nav/NavBar/NavBar';
 import { Container } from 'semantic-ui-react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import HomePage from '../../features/home/HomePage';
@@ -10,11 +10,13 @@ import UserDetailedPage from '../../features/user/UserDetailed/UserDetailedPage'
 import SettingsDashboard from '../../features/user/Settings/SettingsDashboard';
 import EventForm from '../../features/event/EventForm/EventForm';
 import TestComponent from '../../features/testareas/TestComponent';
+import ModalManager from '../../features/modals/ModalManager';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
+        <ModalManager />
         <Route exact path='/' className='main' component={HomePage} />
         <Route path='/(.+)' render={() => (
           <React.Fragment>
